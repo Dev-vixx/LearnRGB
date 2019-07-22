@@ -1,0 +1,14 @@
+.box
+{
+    padding-bottom: 100%;
+    height: auto;
+    max-width: auto;
+    background: #232323;
+    border-radius: 6px;
+    transition: all 0.6s ease-out;
+}
+.box:hover
+{
+    transform-origin: top bottom;
+    transform: scale(1.1);
+}
