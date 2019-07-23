@@ -17,6 +17,7 @@ export const NavLinks = () =>
                 display: "flex",
                 listStyle: "none"
             }}>
+                {/* react router dom NavLinks here */}
                 <li style={style.li}>Easy</li>
                 <li style={style.li}>Hard</li>
                 <li style={style.li}>Expert</li>
