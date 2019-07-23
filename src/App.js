@@ -1,15 +1,21 @@
 import React from 'react';
 import { Box } from "./Box/Box";
 import './App.css';
+import {Nav as NavigationBar } from './Nav/Nav';
 
 class App extends React.Component {
-  /**
-  * Warning: This lifecycle is currently deprecated, and will be removed in React version 17+
-  More details here: https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
-  */
+
+
+
+  // on mount of component call the method start game
   componentDidMount() {
     this.game.start();
+    // starting the game on keydown when the key is == spacebar
+    window.addEventListener("keydown", e => parseInt(e.keyCode) === 32 ? this.game.start() : null )
   }
+
+
+  // game object
   game = {
     setSecretColor: ()=>
     { 
@@ -70,21 +76,26 @@ class App extends React.Component {
 
   };
 
+
+
   state = { 
     secretGameKey: null,
     num: Array(5).fill("sds"),
     isHard: false
     }
+
+
   render()
   {
     return (
       <div className="App">
-        <h3 onClick={this.game.start}>Start game</h3>
+        <NavigationBar  />
+        {/* display the little rgb banner for a better ui  */}
         <h5 onClick={this.game.activateHardLevel}>Hard level</h5>
         <p>what color is this {this.state.secretGameKey}</p>
         <div className="container">
           {
-            this.state.num.map((v,i)=>
+            this.state.num.map((_,i)=>
             {
              return ( <Box secret={this.state.secretGameKey} reset={this.game.correct} key={i}/>)
             })
