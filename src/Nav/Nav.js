@@ -8,6 +8,7 @@ export const Nav = () =>
         boxShadow: "0 2px 4px 0 #aaa",
         height: "60px",
         width: "100%",
+        position: "fixed",
         // this holds the space around the navigation bar
         container: {
             padding: "0 50px"
