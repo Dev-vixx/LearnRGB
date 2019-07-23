@@ -19,8 +19,8 @@ class App extends React.Component {
   game = {
     setSecretColor: ()=>
     { 
-      let boxes = document.querySelectorAll(".box");
-      let special = Math.floor(Math.random()*boxes.length);
+        let boxes = document.querySelectorAll(".box");
+        let special = Math.floor(Math.random()*boxes.length);
         let code = boxes[special].style.backgroundColor;
         this.setState({secretGameKey: code})
     },
@@ -90,15 +90,17 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavigationBar  />
+        {/* rgb table here */}
+        <div className="hero"> 
+            <h2>
+                {this.state.secretGameKey}
+            </h2>
+        </div>
         {/* display the little rgb banner for a better ui  */}
         <h5 onClick={this.game.activateHardLevel}>Hard level</h5>
-        <p>what color is this {this.state.secretGameKey}</p>
         <div className="container">
           {
-            this.state.num.map((_,i)=>
-            {
-             return ( <Box secret={this.state.secretGameKey} reset={this.game.correct} key={i}/>)
-            })
+            this.state.num.map((_,i)=> <Box secret={this.state.secretGameKey} reset={this.game.correct} key={i}/>)
           }
         </div>
       </div>

@@ -4,7 +4,7 @@ export const Nav = () =>
 {
     // inline styling 
     let style = {
-        backgroundColor: "#24282d",
+        backgroundColor: "#011627",
         boxShadow: "0 2px 4px 0 #aaa",
         height: "60px",
         width: "100%",
@@ -18,10 +18,7 @@ export const Nav = () =>
             position: "absolute",
             marginTop: "20px",
             fontFamily: "fira sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-            textTransform: "uppercase !important",
-            // text tranform
-            txtCaps: {
-            }
+            textTransform: "uppercase !important"
         }
     }
     
@@ -36,7 +33,7 @@ export const Nav = () =>
                     </a>
                 </div>
                 {/* The basic App routes/links to toggle the game mode  */}
-                <Links/>
+                <Links />
             </div>
 
         </div>

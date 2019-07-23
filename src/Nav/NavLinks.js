@@ -5,10 +5,10 @@ export const NavLinks = () =>
     let style = {
         display: "flex",
         justifyContent: "flex-end",
-        paddingTop: "5px",
+        paddingTop: "5px !important",
         color: "#fff",
         li: {
-            padding: "0 20px"
+            padding: "20px"
         }
     }
     return(
