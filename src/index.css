@@ -6,4 +6,12 @@ body,html,*{
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all 1s ease-out;
+}
+@media(max-width: 800px)
+{
+  div.navigation ul
+  {
+      display: none !important;
+  }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLinks as Links} from "./NavLinks";
+import '../index.css';
 export const Nav = () =>
 {
     // inline styling 
