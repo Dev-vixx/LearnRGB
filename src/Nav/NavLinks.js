@@ -5,12 +5,22 @@ export const NavLinks = () =>
     let style = {
         display: "flex",
         justifyContent: "flex-end",
-        paddingTop: "20px",
-        color: "#fff"
+        paddingTop: "5px",
+        color: "#fff",
+        li: {
+            padding: "0 20px"
+        }
     }
     return(
         <div style={style}>
-            NavLinks here
+            <ul style={{
+                display: "flex",
+                listStyle: "none"
+            }}>
+                <li style={style.li}>Easy</li>
+                <li style={style.li}>Hard</li>
+                <li style={style.li}>Expert</li>
+                </ul>
         </div>
     )
 }
